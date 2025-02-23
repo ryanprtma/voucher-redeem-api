@@ -1,4 +1,4 @@
-package config
+package commons
 
 import (
 	"log"
@@ -24,6 +24,7 @@ func LoadConfig() map[string]string {
 		"user":     os.Getenv("DB_USER"),
 		"password": os.Getenv("DB_PASS"),
 		"database": os.Getenv("DB_NAME"),
+		"app_port": os.Getenv("APP_PORT"),
 	}
 
 	return config
