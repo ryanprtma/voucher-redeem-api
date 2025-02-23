@@ -5,8 +5,7 @@ type InvariantError struct {
 }
 
 func NewInvariantError(message string) *InvariantError {
-	clientError := *NewClientError(message, nil)
 	return &InvariantError{
-		clientError,
+		ClientError: *NewClientError(message, nil),
 	}
 }
